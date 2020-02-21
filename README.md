@@ -1,6 +1,9 @@
 # SoalShiftSISOP20_modul1_C03
 
-### SoalShiftSISOP20_modul1_xyy:
+### SoalShiftSISOP20_modul1_c22:
+
+Soal Shift Modul 1:
+1. [Soal 1](#1-soal-1)
 
 #### 1. Soal 1
 ##### Whits adalah seorang mahasiswa teknik informatika. Dia mendapatkan tugas praktikum untuk membuat laporan berdasarkan data yang ada pada file “Sample-Superstore.tsv”. Namun dia tidak dapat menyelesaikan tugas tersebut. Laporan yang diminta berupa :
