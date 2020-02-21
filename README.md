@@ -29,3 +29,4 @@ soal 1c:
 awk -F "\t" '{if($13=="Central" || $13=="Central") a[$17]=a[$17]+$21} END {for(i in a) print i}' Sample-Superstore.tsv | sort -g | head -10
 ```
 + ##### Penjelasan Soal 1a
++ ###### `awk -F "\t"`
