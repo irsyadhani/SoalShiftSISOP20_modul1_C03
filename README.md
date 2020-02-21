@@ -82,5 +82,11 @@ done
 + ###### `a=1`
 ##### Artinya menentukan nilai awal 1
 + ###### `while [ $a -lt 29 ]do`
-+ ###### `do`
 ##### Artinya memulai nilai 1 sampai 29
++ ###### `echo $a`
+##### Artinya menampilkan nilai
++ ###### `wget -O pdkt_kusuma_$a.jpg "https://loremflickr.com/320/240/cat"`
+##### Artinya mendownload file gambar dari `https://loremflickr.com/320/240/cat` serta untuk penamaan pakai `-O`. Terdapat `$a` untuk memanggil variabel a.
++ ###### ` a=$((a + 1))done`
+##### Artinya menambah nilai looping a sampai dengan syarat yang ditentukan tadi.
+###### Hasil dari soal 3a
