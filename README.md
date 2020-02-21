@@ -31,4 +31,4 @@ awk -F "\t" '{if($13=="Central" || $13=="Central") a[$17]=a[$17]+$21} END {for(i
 + ##### Penjelasan Soal 1a
 + ###### `awk -F "\t"` artinya tab menjadi field separatornya
 + ###### `'NR > 1 {a[$13]=a[$13]+$21} END {for(i in a) print i}' Sample-Superstore.tsv | sort -g | head -1` 
-#####Output keluar di terminal.
+##### Output keluar di terminal.
