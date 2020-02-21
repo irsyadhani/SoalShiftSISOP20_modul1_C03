@@ -89,4 +89,20 @@ done
 ##### Artinya mendownload file gambar dari `https://loremflickr.com/320/240/cat` serta untuk penamaan pakai `-O`. Terdapat `$a` untuk memanggil variabel a.
 + ###### ` a=$((a + 1))done`
 ##### Artinya menambah nilai looping a sampai dengan syarat yang ditentukan tadi.
-###### Hasil dari soal 3a
+###### Hasil dari soal 3a:
+![alt text](https://github.com/irsyadhani22/SoalShiftSISOP20_modul1_C03/blob/master/soal3/gambar_soal3/soal3a.png "Hasil Soal 3a")
+
+crontab script *jawabansoal3b* :
+
+```sh
+05 06,*/8 * * 1-5,7 ls /home/irsyad/gambar_kusuma > /home/irsyad/log_kusuma/wget.log
+```
+##### Penjelasan Soal 3b
++ ###### `05 06,*/8 * * 1-5,7`
+##### Artinya akan menjadwalkan pada pukul 06.05 setiap 8 jam di hari sabtu setiap hari
++ ###### `ls`
+##### Artinya menampilkan list
++ ###### `/home/irsyad/gambar_kusuma >`
+##### Artinya melist di folder /home/irsyad/gambar_kusuma dan tanda `>` fungsi untuk copy namanya ditumpuk
++ ###### `/home/irsyad/log_kusuma/wget.log`
+##### Artinya disimpan di folder /home/irsyad/log_kusuma/wget.log disimpan di log wget.log
