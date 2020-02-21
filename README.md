@@ -108,3 +108,5 @@ crontab script *jawabansoal3b* :
 ##### Artinya disimpan di folder /home/irsyad/log_kusuma/wget.log disimpan di log wget.log.
 ###### hasil dari soal 3b:
 ![alt text](https://github.com/irsyadhani22/SoalShiftSISOP20_modul1_C03/blob/master/soal3/gambar_soal3/soal3b.png "Hasil Soal 3b")
+
+##### Soal 3c belum menemukan cara untuk mendeteksi gambar yang sama(duplicate) pada saat mendownload
