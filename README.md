@@ -13,7 +13,7 @@ Soal Shift Modul 1:
 ##### Whits memohon kepada kalian yang sudah jago mengolah data untuk mengerjakan laporan tersebut.
 ##### *Gunakan Awk dan Command pendukung
 
-File *Sample-Superstore.tsv* disimpan dalam folder `/home/irsyad`. File nya terdapat di `/home/irsyad/Sistem Operasi/Soal Modul 1/soal1` yang didalam teradapat file `jawabansoal1a`
+File *Sample-Superstore.tsv* disimpan dalam `/home/irsyad`. File nya terdapat di `/home/irsyad/Sistem Operasi/Soal Modul 1/soal1` yang didalam teradapat file `jawabansoal1a`
 Isi dari bash script `jawabansoal1a` :
 
 soal 1a:
@@ -31,4 +31,4 @@ awk -F "\t" '{if($13=="Central" || $13=="Central") a[$17]=a[$17]+$21} END {for(i
 ##### Penjelasan Soal 1a
 + ###### `awk -F "\t"` artinya tab menjadi field separatornya
 + ###### `'NR > 1 {a[$13]=a[$13]+$21} END {for(i in a) print i}' Sample-Superstore.tsv | sort -g | head -1` 
-##### .Artinya pencarian dilakukan file Sample-Superstore.tsv, filter pencarian dimulai dari baris ke 2.Output keluar di terminal.
+##### Artinya pencarian dilakukan file Sample-Superstore.tsv, filter pencarian dimulai dari baris ke 2. Membuat sebuah array a indeksnya di kolom 13 (kolom region) serta menjumlahkan di kolom 21 (kolom profit), setelah itu disimpan di array a di indeks yang disesuaiakan di data kolom 13 (kolom region). Setelah itu dilooping untuk mengoutputkan data generic-numeric-value fungsi untuk memfilter nilai minimum. Output keluar di terminal.
