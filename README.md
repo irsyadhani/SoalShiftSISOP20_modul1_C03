@@ -105,4 +105,6 @@ crontab script *jawabansoal3b* :
 + ###### `/home/irsyad/gambar_kusuma >`
 ##### Artinya melist di folder /home/irsyad/gambar_kusuma dan tanda `>` fungsi untuk copy namanya ditumpuk
 + ###### `/home/irsyad/log_kusuma/wget.log`
-##### Artinya disimpan di folder /home/irsyad/log_kusuma/wget.log disimpan di log wget.log
+##### Artinya disimpan di folder /home/irsyad/log_kusuma/wget.log disimpan di log wget.log.
+###### hasil dari soal 3b:
+![alt text](https://github.com/irsyadhani22/SoalShiftSISOP20_modul1_C03/blob/master/soal3/gambar_soal3/soal3b.png "Hasil Soal 3b")
