@@ -39,7 +39,12 @@ awk -F "\t" '{if($13=="Central" || $13=="Central") a[$17]=a[$17]+$21} END {for(i
 + ###### `awk -F "\t"` 
 ##### Artinya tab menjadi field separatornya
 + ###### `'{if($13=="Central") a[$11]=a[$11]+$21} END {for(i in a) print i}' Sample-Superstore.tsv | sort -g | head -2` 
-##### Artinya pencarian dilakukan file Sample-Superstore.tsv, filter pencarian dimulai dari baris ke 2.Setelah itu dicek pada field ke-13 apakah merupakan `Central`. Dibuat array a yang indeksnya di field 11 (kolom state) selanjutnya menjumlahkan indeksnya di field 21 (kolom profit), disimpan di indeks 11 (kolom state).Setelah itu dilooping untuk mengoutputkan data generic-numeric-value fungsi untuk memfilter nilai minimum. 
-mengambil output 2 teratas
-Output keluar di terminal.
-![alt text](https://github.com/irsyadhani22/SoalShiftSISOP20_modul1_C03/blob/master/soal1/gambar_soal1/soal1b.png "Hasil Soal 2")
+##### Artinya pencarian dilakukan file Sample-Superstore.tsv, filter pencarian dimulai dari baris ke 2.Setelah itu dicek pada field ke-13 apakah merupakan `Central`. Dibuat array a yang indeksnya di field 11 (kolom state) berikutnya menjumlahkan indeksnya di field 21 (kolom profit), disimpan di indeks 11 (kolom state).Setelah itu dilooping untuk mengoutputkan data generic-numeric-value fungsi untuk memfilter nilai minimum, mengambil output 2 teratas.Output keluar di terminal.
+![alt text](https://github.com/irsyadhani22/SoalShiftSISOP20_modul1_C03/blob/master/soal1/gambar_soal1/soal1b.png "Hasil Soal 1b")
+
+##### Penjelasan Soal 1c
++ ###### `awk -F "\t"` 
+##### Artinya tab menjadi field separatornya
++ ###### `'{if($13=="Central" || $13=="Central") a[$17]=a[$17]+$21} END {for(i in a) print i}' Sample-Superstore.tsv | sort -g | head -10` 
+##### Artinya pencarian dilakukan file Sample-Superstore.tsv, filter pencarian dimulai dari baris ke 2.Setelah itu dicek pada field ke-1q apakah merupakan `Texas` dan `Illinois`. Dibuat array a yang indeksnya di field 17 (kolom produk) berikutnya menjumlahkan indeksnya di field 21 (kolom profit), disimpan di indeks 17 (kolom produk).Setelah itu dilooping untuk mengoutputkan data generic-numeric-value fungsi untuk memfilter nilai minimum, mengambil output 2 teratas. Output keluar di terminal.
+![alt text](https://github.com/irsyadhani22/SoalShiftSISOP20_modul1_C03/blob/master/soal1/gambar_soal1/soal1c.png "Hasil Soal 1c")
