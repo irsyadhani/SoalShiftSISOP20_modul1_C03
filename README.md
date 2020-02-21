@@ -4,6 +4,7 @@
 
 Soal Shift Modul 1:
 1. [Soal 1](#1-soal-1)
+2. [Soal 2](#2-soal-2)
 3. [Soal 3](#3-soal-3)
 
 #### 1. Soal 1
@@ -50,16 +51,36 @@ awk -F "\t" '{if($13=="Central" || $13=="Central") a[$17]=a[$17]+$21} END {for(i
 ##### Artinya pencarian dilakukan file Sample-Superstore.tsv, filter pencarian dimulai dari baris ke 2.Setelah itu dicek pada field ke-1q apakah merupakan `Texas` dan `Illinois`. Dibuat array a yang indeksnya di field 17 (kolom produk) berikutnya menjumlahkan indeksnya di field 21 (kolom profit), disimpan di indeks 17 (kolom produk).Setelah itu dilooping untuk mengoutputkan data generic-numeric-value fungsi untuk memfilter nilai minimum, mengambil output 2 teratas. Output keluar di terminal.
 ![alt text](https://github.com/irsyadhani22/SoalShiftSISOP20_modul1_C03/blob/master/soal1/gambar_soal1/soal1c.png "Hasil Soal 1c")
 
+#### 2. Soal 2
+##### Pada suatu siang, laptop Randolf dan Afairuzr dibajak oleh seseorang dan kehilangan data-data penting. Untuk mencegah kejadian yang sama terulang kembali mereka meminta bantuan kepada Whits karena dia adalah seorang yang punya banyak ide. Whits memikirkan sebuah ide namun dia meminta bantuan kalian kembali agar ide tersebut cepat diselesaikan. Idenya adalah kalian (a) membuat sebuah script bash yang dapat menghasilkan password secara acak sebanyak 28 karakter yang terdapat huruf besar, huruf kecil, dan angka. (b) Password acak tersebut disimpan pada file berekstensi .txt dengan nama berdasarkan argumen yang diinputkan dan HANYA berupa alphabet. (c) Kemudian supaya file .txt tersebut tidak mudah diketahui maka nama filenya akan di enkripsi dengan menggunakan konversi huruf (string manipulation) yang disesuaikan dengan jam(0-23) dibuatnya file tersebut dengan program terpisah dengan (misal: password.txt dibuat pada jam 01.28 maka namanya berubah menjadi qbttxpse.txt dengan perintah ‘bash soal2_enkripsi.sh password.txt’. Karena p adalah huruf ke 16 dan file dibuat pada jam 1 maka 16+1=17 dan huruf ke 17 adalah q dan begitu pula seterusnya. Apabila melebihi z, akan kembali ke a, contoh: huruf w dengan jam 5.28, maka akan menjadi huruf b.) dan (d) jangan lupa untuk membuat dekripsinya supaya nama file bisa kembali. HINT: enkripsi yang digunakan adalah caesar cipher. *Gunakan Bash Script
+
+soal 2a-c:
+```sh
+cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 28 | head -n 1 >"$file.txt"
+```
+```sh
+#!/bin/bash
+
+file=$1
+jam=$(date +%H)
 
 
+for ((i=1;i<=jam;i++)) 
+do
+        file=$(echo "$file" | tr '[a-zA-Z]' '[b-zaB-ZA]')
+done
 
 
+```
+##### Penjelasan Soal 2a-c
++ ###### `cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 28 | head -n 1 >"$file.txt"`
+##### Artinya melakukan randomize untuk password dengan format alphanumeric dan memasukkan password ke dalam file yang sudah dibuat.
++ ###### `file=$1 jam=$(date +%H)`
+##### Artinya memasukkan argumen dengan input file=$1 dan membuat fungsi caesar cipher dimana mengambil jam untuk ditambahkan kepada tiap abjad nama file. (contoh, jam 17 dimana ini akan ditambahkan ke tiap abjad pada file yang bernama password.txt lalu nama filenya akan berubah menjadi grjjnfiu.txt) 
++ ###### `for ((i=1;i<=jam;i++)) do file=$(echo "$file" | tr '[a-zA-Z]' '[b-zaB-ZA]') done`
+##### Artinya fungsi ini untuk melakukan randomize nama file nya dimana fungsi tr '[a-zA-Z]' '[b-zaB-ZA]' ini untuk menggeser abjad sebanyak satu kali ke sebelah kanan. Argumen '[b-zaB-ZA]' berfungsi untuk mengembalikan geseran looping ke abjad awal lagi, yaitu a dan A agar bisa menggeser lagi. Fungsi Looping ((i=1;i<=jam;i++)) ini untuk melakukan looping sebanyak jam yang sudah di detect oleh rumus caesar ciphernya. Jika jam menunjukkan jam 17, maka looping akan berjalan sebanyak 17 kali serta abjad akan bergeser sebanyak 17 kali.
 
-
-
-
-
-
+##### Soal 2d belum menemukan cara untuk dekripsi
 
 #### 3. Soal 3
 ##### 1 tahun telah berlalu sejak pencampakan hati Kusuma. Akankah sang pujaan hati kembali ke naungan Kusuma? Memang tiada maaf bagi Elen. Tapi apa daya hati yang sudah hancur, Kusuma masih terguncang akan sikap Elen. Melihat kesedihan Kusuma, kalian mencoba menghibur Kusuma dengan mengirimkan gambar kucing. `[a] Maka dari itu, kalian mencoba membuat script untuk mendownload 28 gambar dari "https://loremflickr.com/320/240/cat" menggunakan command wget dan menyimpan file dengan nama "pdkt_kusuma_NO" (contoh: pdkt_kusuma_1, pdkt_kusuma_2, pdkt_kusuma_3) serta jangan lupa untuk menyimpan log messages wget kedalam sebuah file "wget.log"`. Karena kalian gak suka ribet, kalian membuat penjadwalan untuk menjalankan script download gambar tersebut. Namun, script download tersebut hanya berjalan`[b] setiap 8 jam dimulai dari jam 6.05 setiap hari kecuali hari Sabtu` Karena gambar yang didownload dari link tersebut bersifat random, maka ada kemungkinan gambar yang terdownload itu identik. Supaya gambar yang identik tidak dikira Kusuma sebagai spam, maka diperlukan sebuah script untuk memindahkan salah satu gambar identik. Setelah memilah gambar yang identik, maka dihasilkan gambar yang berbeda antara satu dengan yang lain. Gambar yang berbeda tersebut, akan kalian kirim ke Kusuma supaya hatinya kembali ceria. Setelah semua gambar telah dikirim, kalian akan selalu menghibur Kusuma, jadi gambar yang telah terkirim tadi akan kalian simpan kedalam folder /kenangan dan kalian bisa mendownload gambar baru lagi. `[c] Maka dari itu buatlah sebuah script untuk mengidentifikasi gambar yang identik dari keseluruhan gambar yang terdownload tadi. Bila terindikasi sebagai gambar yang identik, maka sisakan 1 gambar dan pindahkan sisa file identik tersebut ke dalam folder ./duplicate dengan format filename "duplicate_nomor" (contoh : duplicate_200, duplicate_201). Setelah itu lakukan pemindahan semua gambar yang tersisa kedalam folder ./kenangan dengan format filename "kenangan_nomor" (contoh: kenangan_252, kenangan_253). Setelah tidak ada gambar di current directory, maka lakukan backup seluruh log menjadi ekstensi ".log.bak"`. Hint : Gunakan wget.log untuk membuat location.log yang isinya merupakan hasil dari grep "Location". *Gunakan Bash, Awk dan Crontab
