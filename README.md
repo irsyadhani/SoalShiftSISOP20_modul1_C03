@@ -29,6 +29,7 @@ soal 1c:
 awk -F "\t" '{if($13=="Central" || $13=="Central") a[$17]=a[$17]+$21} END {for(i in a) print i}' Sample-Superstore.tsv | sort -g | head -10
 ```
 ##### Penjelasan Soal 1a
-+ ###### `awk -F "\t"` artinya tab menjadi field separatornya
++ ###### `awk -F "\t"` 
+##### Artinya tab menjadi field separatornya
 + ###### `'NR > 1 {a[$13]=a[$13]+$21} END {for(i in a) print i}' Sample-Superstore.tsv | sort -g | head -1` 
 ##### Artinya pencarian dilakukan file Sample-Superstore.tsv, filter pencarian dimulai dari baris ke 2. Membuat sebuah array a indeksnya di kolom 13 (kolom region) serta menjumlahkan di kolom 21 (kolom profit), setelah itu disimpan di array a di indeks yang disesuaiakan di data kolom 13 (kolom region). Setelah itu dilooping untuk mengoutputkan data generic-numeric-value fungsi untuk memfilter nilai minimum. Output keluar di terminal.
