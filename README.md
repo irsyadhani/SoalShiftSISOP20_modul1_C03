@@ -9,3 +9,6 @@
 ##### c. Tampilkan 10 produk (product name) yang memiliki keuntungan (profit) paling sedikit berdasarkan 2 negara bagian (state) hasil poin b
 ##### Whits memohon kepada kalian yang sudah jago mengolah data untuk mengerjakan laporan tersebut.
 ##### *Gunakan Awk dan Command pendukung
+
+File *Sample-Superstore.tsv* disimpan dalam folder `/home/irsyad`. File nya terdapat di `/home/irsyad/Sistem Operasi/Soal Modul 1/soal1` yang didalam teradapat file `jawabansoal1a`
+Isi dari bash script `jawabansoal1a` :
