@@ -1,0 +1,1 @@
+awk -F "\t" '{if($11=="Texas" || $11=="Illinois") a[$17]=a[$17]+$21} END {for(i in a) print a[i], i}' Sample-Superstore.tsv | sort -g | head -10
