@@ -1,1 +1,0 @@
-awk -F "\t" '{if($13=="Central") a[$11]=a[$11]+$21} END {for(i in a) print i}' Sample-Superstore.tsv | sort -g | head -2
