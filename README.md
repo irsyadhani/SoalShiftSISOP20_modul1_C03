@@ -116,35 +116,41 @@ grep "Location" /home/irsyad/no3/wget.log > /home/irsyad/no3/location.log
 
 ```
 
-##### Penjelasan Soal 3a
-+ ###### `a=1`
-##### Artinya menentukan nilai awal 1
-+ ###### `while [ $a -lt 29 ]do`
-##### Artinya memulai nilai 1 sampai 29
-+ ###### `echo $a`
-##### Artinya menampilkan nilai
-+ ###### `wget -O pdkt_kusuma_$a.jpg "https://loremflickr.com/320/240/cat"`
-##### Artinya mendownload file gambar dari `https://loremflickr.com/320/240/cat` serta untuk penamaan pakai `-O`. Terdapat `$a` untuk memanggil variabel a.
-+ ###### ` a=$((a + 1))done`
-##### Artinya menambah nilai looping a sampai dengan syarat yang ditentukan tadi.
-###### Hasil dari soal 3a:
+Penjelasan Soal 3a
++ ###### `mkdir /home/irsyad/no3/kenangan`
+Membuat folder kenangan
++ ###### `mkdir /home/irsyad/no3/duplicate`
+Membuat folder duplicate
++ ###### `> /home/irsyad/no3/wget.log`
+Membuat file wget.log sesuai dengan folder yang didentukan
++ ###### `> /home/irsyad/no3/location.log`
+Membuat file location.log sesuai dengan folder yang didentukan
++ ###### `for ((n=1; n<29; n=n+1)) do`
+Membuat looping sampai 28 
++ ###### `wget -a /home/irsyad/no3/wget.log "https://loremflickr.com/320/240/cat" -O /home/irsyad/no3/pdkt_kusuma_"$n".jpg done`
+Menggunakan fungsi wget -a untuk mengambil proses tulisan dari link `https://loremflickr.com/320/240/cat` dan fungsi wget -O untuk penamaan serta memakai variabel n untuk penomoran yang urut 
++ ###### `grep "Location" /home/irsyad/no3/wget.log > /home/irsyad/no3/location.log`
+Mencari tulisan `Location` dari link yang sudah ditentukan lalu dipindahkan ke file location untuk perbedaannya
+
+Hasil dari soal 3a:
+
 ![alt text](https://github.com/irsyadhani22/SoalShiftSISOP20_modul1_C03/blob/master/soal3/gambar_soal3/soal3a.png "Hasil Soal 3a")
 
 crontab script *jawabansoal3b* :
 
 ```sh
-05 06,*/8 * * 1-5,7 ls /home/irsyad/gambar_kusuma > /home/irsyad/log_kusuma/wget.log
+05 06,*/8 * * 1-5,7 bash /home/irsyad/no3/jawabansoal3a.sh
 ```
-##### Penjelasan Soal 3b
+Penjelasan Soal 3b
 + ###### `05 06,*/8 * * 1-5,7`
-##### Artinya akan menjadwalkan pada pukul 06.05 setiap 8 jam di hari sabtu setiap hari
-+ ###### `ls`
-##### Artinya menampilkan list
-+ ###### `/home/irsyad/gambar_kusuma >`
-##### Artinya melist di folder /home/irsyad/gambar_kusuma dan tanda `>` fungsi untuk copy namanya ditumpuk
-+ ###### `/home/irsyad/log_kusuma/wget.log`
-##### Artinya disimpan di folder /home/irsyad/log_kusuma/wget.log disimpan di log wget.log.
-###### hasil dari soal 3b:
+Akan menjadwalkan pada pukul 06.05 setiap 8 jam di hari sabtu setiap hari
++ ###### `bash`
+Menjalankan file yang berada `jawabansoal3a.sh`
++ ###### `/home/irsyad/no3/jawabansoal3a.sh`
+link yang dituju
+
+Hasil dari soal 3b:
+
 ![alt text](https://github.com/irsyadhani22/SoalShiftSISOP20_modul1_C03/blob/master/soal3/gambar_soal3/soal3b.png "Hasil Soal 3b")
 
 ##### Soal 3c belum menemukan cara untuk mendeteksi gambar yang sama(duplicate) pada saat mendownload
