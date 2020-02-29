@@ -1,9 +1,13 @@
-#!/bin/bash
-a=1
+#!bin/bash
+mkdir /home/irsyad/no3/kenangan
+mkdir /home/irsyad/no3/duplicate
 
-while [ $a -lt 29 ]
+> /home/irsyad/no3/wget.log
+> /home/irsyad/no3/location.log
+
+for ((n=1; n<29; n=n+1))
 do
-echo $a
-wget -O pdkt_kusuma_$a.jpg "https://loremflickr.com/320/240/cat"
-  a=$((a + 1))
+wget -a /home/irsyad/no3/wget.log "https://loremflickr.com/320/240/cat" -O /home/irsyad/no3/pdkt_kusuma_"$n".jpg
 done
+
+grep "Location" /home/irsyad/no3/wget.log > /home/irsyad/no3/location.log
