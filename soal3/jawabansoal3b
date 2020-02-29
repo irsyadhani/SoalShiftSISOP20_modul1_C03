@@ -1,1 +1,1 @@
-05 06,*/8 * * 1-5,7 ls /home/irsyad/gambar_kusuma > /home/irsyad/log_kusuma/wget.log
+05 06,*/8 * * 1-5,7 bash /home/irsyad/no3/jawabansoal3a.sh
