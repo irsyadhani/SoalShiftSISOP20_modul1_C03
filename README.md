@@ -80,7 +80,8 @@ done
 ##### Artinya memasukkan argumen dengan input file=$1 dan membuat fungsi caesar cipher dimana mengambil jam untuk ditambahkan kepada tiap abjad nama file. (contoh, jam 16 dimana ini akan ditambahkan ke tiap abjad pada file yang bernama password.txt lalu nama filenya akan berubah menjadi fqiimeht.txt) 
 ![alt text](https://github.com/irsyadhani22/SoalShiftSISOP20_modul1_C03/blob/master/soal2/soal_2_github/1582969750727.jpg "File yang sudah di enkripsi dengan password di dalamnya.")
 + ###### `for ((i=1;i<=jam;i++)) do file=$(echo "$file" | tr '[a-zA-Z]' '[b-zaB-ZA]') done`
-##### Artinya fungsi ini untuk melakukan randomize nama file nya dimana fungsi tr '[a-zA-Z]' '[b-zaB-ZA]' ini untuk menggeser abjad sebanyak satu kali ke sebelah kanan. Argumen '[b-zaB-ZA]' berfungsi untuk mengembalikan geseran looping ke abjad awal lagi, yaitu a dan A agar bisa menggeser lagi. Fungsi Looping ((i=1;i<=jam;i++)) ini untuk melakukan looping sebanyak jam yang sudah di detect oleh rumus caesar ciphernya. Jika jam menunjukkan jam 16, maka looping akan berjalan sebanyak 16 kali serta abjad akan bergeser sebanyak 17 kali.
+##### Artinya fungsi ini untuk melakukan randomize nama file nya dimana fungsi tr '[a-zA-Z]' '[b-zaB-ZA]' ini untuk menggeser abjad sebanyak satu kali ke sebelah kanan. Argumen '[b-zaB-ZA]' berfungsi untuk mengembalikan geseran looping ke abjad awal lagi, yaitu a dan A agar bisa menggeser lagi. Fungsi Looping ((i=1;i<=jam;i++)) ini untuk melakukan looping sebanyak jam yang sudah di detect oleh rumus caesar ciphernya. Jika jam menunjukkan jam 17, maka looping akan berjalan sebanyak 17 kali serta abjad akan bergeser sebanyak 17 kali.
+![alt text](https://github.com/irsyadhani22/SoalShiftSISOP20_modul1_C03/blob/master/soal2/soal_2_github/1582971163522.jpg "Hasil penggeseran abjad oleh waktu.")
 
 
 ##### Soal 2d belum menemukan cara untuk dekripsi
