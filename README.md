@@ -1,11 +1,17 @@
 # SoalShiftSISOP20_modul1_C03
 
 ### Soal Shift Sistem Operasi 2020
+#
+Kelompok C03:
+1. Irsyadhani Dwi Shubhi (05111840000022)
+2. Reihan Nanda Ramadhan (05111840000132)
+#
 
 Soal Shift Modul 1:
 1. [Soal 1](#1-soal-1)
 2. [Soal 2](#2-soal-2)
 3. [Soal 3](#3-soal-3)
+#
 
 #### 1. Soal 1
 Whits adalah seorang mahasiswa teknik informatika. Dia mendapatkan tugas praktikum untuk membuat laporan berdasarkan data yang ada pada file “Sample-Superstore.tsv”. Namun dia tidak dapat menyelesaikan tugas tersebut. Laporan yang diminta berupa :
@@ -48,7 +54,7 @@ awk -F "\t" '{if($11=="Texas" || $11=="Illinois") a[$17]=a[$17]+$21} END {for(i 
 + ###### `awk -F "\t"` 
 ##### Artinya tab menjadi field separatornya
 + ###### `'{if($11=="Texas" || $11=="Illinois") a[$17]=a[$17]+$21} END {for(i in a) print a[i], i}' Sample-Superstore.tsv | sort -g | head -10` 
-##### Artinya pencarian dilakukan file Sample-Superstore.tsv.Setelah itu dicek pada field ke-11 apakah merupakan `Texas` dan `Illinois`. Dibuat array a yang indeksnya di field 17 (kolom produk) berikutnya menjumlahkan indeksnya di field 21 (kolom profit), disimpan di indeks 17 (kolom produk).Setelah itu dilooping untuk mengoutputkan data generic-numeric-value fungsi untuk memfilter nilai minimum, mengambil output 10 teratas terkecil. Output keluar di terminal.
+Artinya pencarian dilakukan file Sample-Superstore.tsv.Setelah itu dicek pada field ke-11 apakah merupakan `Texas` dan `Illinois`. Dibuat array a yang indeksnya di field 17 (kolom produk) berikutnya menjumlahkan indeksnya di field 21 (kolom profit), disimpan di indeks 17 (kolom produk).Setelah itu dilooping untuk mengoutputkan data generic-numeric-value fungsi untuk memfilter nilai minimum, mengambil output 10 teratas terkecil. Output keluar di terminal.
 ![alt text](https://github.com/irsyadhani22/SoalShiftSISOP20_modul1_C03/blob/master/soal1/gambar_soal1/soal1c.png "Hasil Soal 1c")
 
 #### 2. Soal 2
